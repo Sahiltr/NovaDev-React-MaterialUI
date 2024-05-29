@@ -35,18 +35,15 @@ const UserBox = styled("div")(({theme})=>({
     
 }));
 
-
-
 const Navbar = () => {
 
-  const [Open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
   return (
-    <div>
       <AppBar position='sticky'>
-        <StyledToolbar><Typography variant='h6' sx={{display:{xs:"none", sm:"block"}}} >LAMA DEV</Typography>
+        <StyledToolbar><Typography variant='h6' sx={{display:{xs:"none", sm:"block"}}} >NOVA DEV</Typography>
         <Pets sx={{display:{xs:"block", sm:"none"}}} />
-        <Search><InputBase placeholder='search' /></Search>
+        <Search ><InputBase placeholder='search' /></Search>
         <Icons>
         <Badge badgeContent={4} color="error">
           <Mail/>
@@ -70,7 +67,7 @@ const Navbar = () => {
        <Menu
         id="demo-positioned-menu"
         aria-labelledby="demo-positioned-button"
-        open={Open}
+        open={open}
         onClose={e=>setOpen(false)}
         anchorOrigin={{
           vertical: 'top',
@@ -86,7 +83,6 @@ const Navbar = () => {
         <MenuItem >Logout</MenuItem>
       </Menu>
         </AppBar>
-    </div>
   )
 }
 
